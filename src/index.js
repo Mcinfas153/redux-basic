@@ -1,8 +1,10 @@
 import store from "./store";
-import { bugAdded, bugRemoved } from './dispatchActions'
+import { bugAdded, bugRemoved, bugResolved } from './dispatchActions'
 
-store.dispatch(bugAdded('Bug Added'))
+store.dispatch(bugAdded('2nd Bug Added'))
 
-store.dispatch(bugRemoved(1))
+//store.dispatch(bugRemoved(2))
+
+store.dispatch(bugResolved(2))
 
 console.log(store.getState())
